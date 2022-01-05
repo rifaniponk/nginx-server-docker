@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  www:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      working_dir: /usr/share/nginx/html
+      volumes:
+        - ./www:/usr/share/nginx/html
+      ports:
+        - "80:80"
